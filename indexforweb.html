@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Legal Apprentice Suite</title>
+        <base href="./">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+
+    <h1>Legal Apprentice (LA) Suite Demo</h1>
+    <br />
+    <p><b>This Azure deployment of LA-MPS ("Legal Apprentice - Marker, Pad, and Search")</b> is intended to provide a functional demonstration to accompany the paper: Vern R. Walker and Stephen R. Strong, "Toward Implementation Science: A Case Study Using LA-MPS to Research Argument Elements at Scale," in <em>Proceedings of the Sixth Workshop on Automated Semantic Analysis of Information in Legal Text (ASAIL 2023)</em>, June 23, 2023, Braga, Portugal.</p>
+
+    <h2>This set of applications integrates to create LA-MPS:</h2>
+    <p><a href="/legalmarker/index.html"><h2>Marker</h2></a></p>
+    <!-- <p><a href="/legalpad/index.html">Pad</a></p> -->
+    <p><a href="/legalsearch/index.html"><h2>Search</h2></a></p>
+
+    <!-- <p><a href="/legalmarker/#/case/1800023">1800023</a></p>
+    <p><a href="https://legalapprentice.azurewebsites.net/legalmarker/#/case/1800023">ABS 1800023</a></p> -->
+
+    <!-- <p><a href="~#/case/1800023">/case/#/case/1800023</a></p>
+
+    <p><a href="~/marker/#/case/1800023">marker/#/case/1800023</a></p> -->
+
+    
+    <p><b>LA-Marker</b> is a web application with a user interface for viewing and annotating individual legal documents. It is written using the open-source Angular web framework from Google. This Azure deployment is for demonstration purposes only — it will open and save files only locally, without communication to LA-Pad (see below).</p>
+
+    <p><b>LA-Pad</b> is a web application normally integrated with LA-Marker, and has a user interface for grouping and annotating selections of sentences and paragraphs sent to it from LA-Marker or from LA-Search (see below). LA-Pad is omitted from this Azure deployment because it would require a login and authentication functionality.</p>
+
+    <p><b>LA-Search</b> is a web application with a user interface for searching a large set of documents that have been semantically enriched. It is currently configured to use Elasticsearch, a search engine based on the Lucene library, but it could be configured to use any search engine. This Azure deployment is for demonstration purposes only — it will search only the stratified random sample dataset ("SRS Dataset") described in the paper cited above, with sentences curated only in the decision section headed "REASONS AND BASES FOR FINDINGS AND CONCLUSIONS". This Azure deployment is without communication to LA-Pad (see above).</p>
+
+    If you have any questions about this Azure demo, or encounter any problems, please email <a href="mailto:stephen.strongiot@gmail.com">Stephen R. Strong</a>.
+
+    <script type="text/javascript">
+        //  https://localhost:44360/legalmarker/#/case/case1800023
+        //this code will force all the apps to open
+        window.addEventListener("load", () => {
+            console.log("loading...")
+            //window.open("/legalmarker/index.html", "_blank");
+            //window.open("/legalpad/index.html", "_blank");
+            //window.open("/legalsearch/index.html", "_blank");
+        });
+    </script>
+</body>
+</html>
